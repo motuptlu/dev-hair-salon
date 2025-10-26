@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dev Hair Colourist Salon - Award-Winning Hair Experts</title>
+    <meta name="description" content="Learn about Dev Hair Colourist Salon - 15+ years of excellence in hair coloring and styling. Award-winning team in Gurugram.">
+    <meta name="keywords" content="about dev hair salon, best hair colourist gurugram, professional hair stylists, salon team">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="scissors-animation">
+                <i class="fas fa-cut"></i>
+            </div>
+            <div class="loading-text">Dev Hair Colourist</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-svg" width="80" height="80" viewBox="0 0 200 200">
+                    <circle class="logo-circle-outer" cx="100" cy="100" r="95" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                    <g class="logo-inner">
+                        <path class="logo-scissors" d="M70,80 Q75,90 80,100 L100,80 L80,100 Q75,110 70,120" stroke="url(#goldGradient)" stroke-width="3" fill="none"/>
+                        <path class="logo-scissors" d="M130,80 Q125,90 120,100 L100,80 L120,100 Q125,110 130,120" stroke="url(#goldGradient)" stroke-width="3" fill="none"/>
+                        <circle class="logo-dot" cx="70" cy="75" r="8" fill="url(#goldGradient)"/>
+                        <circle class="logo-dot" cx="130" cy="75" r="8" fill="url(#goldGradient)"/>
+                        <text class="logo-text" x="100" y="115" font-family="Cormorant Garamond" font-size="45" font-weight="700" fill="url(#goldGradient)" text-anchor="middle">D</text>
+                    </g>
+                    <circle class="logo-circle-inner" cx="100" cy="100" r="70" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3"/>
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#F4E4C1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#C9A961;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text-container">
+                    <span class="logo-title">DEV</span>
+                    <span class="logo-subtitle">Hair Colourist</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920') center/cover fixed;">
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">About <span class="text-accent">Us</span></h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>About Us</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="story-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800" alt="Our Story" class="story-img">
+                        <div class="floating-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="section-header">
+                        <span class="section-subtitle">Our Story</span>
+                        <h2 class="section-title">15 Years of <span class="text-accent">Excellence</span></h2>
+                    </div>
+                    <p class="story-text">
+                        Founded in 2010, Dev Hair Colourist Salon has been at the forefront of hair coloring innovation in Gurugram. What started as a passion for transforming hair into art has evolved into one of the most trusted names in premium hair care.
+                    </p>
+                    <p class="story-text">
+                        Our founder, Dev, trained with master colorists across Europe and brought cutting-edge techniques to India. Today, our team of award-winning stylists continues this legacy, combining international expertise with personalized Indian hospitality.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="stat-number" data-target="15000">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Expert Stylists</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="stat-number" data-target="25">0</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision-section section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="mission-title">Our Mission</h3>
+                        <p class="mission-text">
+                            To empower every client with confidence through exceptional hair artistry. We believe that great hair isn't just about color and style—it's about self-expression, confidence, and feeling your absolute best.
+                        </p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Deliver world-class hair services</li>
+                            <li><i class="fas fa-check"></i> Use only premium, sustainable products</li>
+                            <li><i class="fas fa-check"></i> Provide personalized consultations</li>
+                            <li><i class="fas fa-check"></i> Create a luxurious, welcoming experience</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="mission-title">Our Vision</h3>
+                        <p class="mission-text">
+                            To be recognized as India's leading destination for innovative hair coloring and styling, setting new standards of excellence in the beauty industry while nurturing the next generation of hair artists.
+                        </p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Pioneer new coloring techniques</li>
+                            <li><i class="fas fa-check"></i> Expand to multiple locations</li>
+                            <li><i class="fas fa-check"></i> Train aspiring hair artists</li>
+                            <li><i class="fas fa-check"></i> Champion sustainable beauty practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="values-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">What We Stand For</span>
+                <h2 class="section-title">Our Core <span class="text-accent">Values</span></h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-title">Passion</h3>
+                    <p class="value-description">We love what we do, and it shows in every client transformation</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="value-title">Excellence</h3>
+                    <p class="value-description">We never settle, constantly refining our craft and techniques</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="value-title">Integrity</h3>
+                    <p class="value-description">Honest consultations and transparent pricing, always</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-description">Embracing the latest trends and technologies in hair care</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="500">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="value-title">Sustainability</h3>
+                    <p class="value-description">Committed to eco-friendly products and practices</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Community</h3>
+                    <p class="value-description">Building lasting relationships with our clients and team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="awards-section section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Recognition</span>
+                <h2 class="section-title text-white">Awards & <span class="text-accent">Achievements</span></h2>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="award-title">Best Hair Salon 2024</h3>
+                    <p class="award-org">Gurugram Beauty Awards</p>
+                </div>
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="award-title">Top Color Specialist</h3>
+                    <p class="award-org">India Hair Excellence</p>
+                </div>
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="award-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="award-title">Customer Choice 2023</h3>
+                    <p class="award-org">Beauty & Wellness India</p>
+                </div>
+                <div class="award-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="award-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="award-title">Premium Salon Certification</h3>
+                    <p class="award-org">International Beauty Council</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us (Enhanced) -->
+    <section class="enhanced-why-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Why Choose Us</span>
+                <h2 class="section-title">The Dev Hair <span class="text-accent">Difference</span></h2>
+            </div>
+            <div class="enhanced-why-grid">
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                    <h3>Expert Team</h3>
+                    <p>Internationally trained stylists with 10+ years experience each</p>
+                </div>
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <h3>Custom Solutions</h3>
+                    <p>Personalized color formulations matched to your unique style</p>
+                </div>
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <h3>Premium Products</h3>
+                    <p>Only the finest brands: L'Oréal, Wella, Schwarzkopf, Olaplex</p>
+                </div>
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                    </div>
+                    <h3>Luxury Experience</h3>
+                    <p>Relax in our elegantly designed, comfortable salon space</p>
+                </div>
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>100% satisfaction guaranteed or we'll make it right</p>
+                </div>
+                <div class="enhanced-why-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="enhanced-icon-wrapper">
+                        <div class="enhanced-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <h3>Time Respect</h3>
+                    <p>We value your time with punctual appointments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920') center/cover fixed;">
+        <div class="container text-center">
+            <h2 class="cta-title" data-aos="fade-up">Experience the Dev Hair Difference</h2>
+            <p class="cta-subtitle" data-aos="fade-up" data-aos-delay="200">Join thousands of satisfied clients</p>
+            <a href="booking.html" class="btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h3 class="footer-title">Dev Hair Colourist</h3>
+                    <p class="footer-text">Gurugram's premier destination for luxury hair coloring and styling. Where artistry meets expertise.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/devhaircolourist" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/diwash.colourist/" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/919990232499" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+919990232499" class="social-link" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#coloring">Hair Coloring</a></li>
+                        <li><a href="services.html#styling">Hair Styling</a></li>
+                        <li><a href="services.html#treatments">Hair Treatments</a></li>
+                        <li><a href="services.html#bridal">Bridal Services</a></li>
+                        <li><a href="services.html#mens">Men's Grooming</a></li>
+                        <li><a href="services.html#extensions">Hair Extensions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Shop No - 2, UG Floor, South Point Mall, Golf Course Rd, Sector 53, Gurugram, Haryana 122011</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919990232499">+91 9990232499</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sun: 10:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dev Hair Colourist Salon. All Rights Reserved.</p>
+                <p>Designed & Developed by <a href="https://hanunova.oneapp.dev/" target="_blank" class="dev-link">HanuNova</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919990232499?text=Hello%20Dev%20Hair%20Colourist!%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <script>
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Trigger counters on scroll
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    animateCounter(entry.target);
+                    entry.target.classList.add('counted');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    </script>
+</body>
+</html>
