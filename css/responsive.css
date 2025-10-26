@@ -1,0 +1,426 @@
+/* Responsive Styles for All Pages */
+
+/* Tablet: 768px - 991px */
+@media (max-width: 991px) {
+    :root {
+        --section-padding: 70px 0;
+    }
+    
+    .container {
+        padding: 0 25px;
+    }
+    
+    .section-title {
+        font-size: 38px;
+    }
+    
+    .hero-title {
+        font-size: 56px;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .logo-svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-title {
+        font-size: 20px;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Why Choose Grid */
+    .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Gallery */
+    .gallery-masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-masonry-item.wide,
+    .gallery-masonry-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+        aspect-ratio: 1;
+    }
+    
+    /* Team Grid */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Blog Grid */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-post {
+        grid-column: 1;
+    }
+    
+    /* Stats Grid */
+    .story-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile: 480px - 767px */
+@media (max-width: 767px) {
+    :root {
+        --section-padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 12px;
+    }
+    
+    .section-description {
+        font-size: 15px;
+    }
+    
+    /* Page Header */
+    .page-header {
+        height: 300px;
+        padding: 100px 0 50px;
+    }
+    
+    .page-title {
+        font-size: 32px;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo-svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-title {
+        font-size: 16px;
+    }
+    
+    .logo-subtitle {
+        font-size: 9px;
+    }
+    
+    /* Grid Layouts */
+    .services-grid,
+    .why-choose-grid,
+    .gallery-masonry,
+    .team-grid,
+    .values-grid,
+    .awards-grid,
+    .enhanced-why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Story Stats */
+    .story-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    /* Welcome Section */
+    .experience-badge {
+        bottom: 15px;
+        right: 15px;
+        padding: 15px;
+    }
+    
+    .badge-number {
+        font-size: 32px;
+    }
+    
+    .badge-text {
+        font-size: 11px;
+    }
+    
+    /* Service Cards */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .service-image {
+        height: 200px;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .service-title {
+        font-size: 20px;
+    }
+    
+    /* Service Details */
+    .service-detail-header {
+        height: 250px;
+    }
+    
+    .service-detail-title {
+        font-size: 24px;
+    }
+    
+    .service-detail-body {
+        padding: 25px;
+    }
+    
+    .price-tag {
+        font-size: 28px;
+    }
+    
+    /* Process Timeline */
+    .process-timeline {
+        padding: 0;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .process-number {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    /* Gallery */
+    .gallery-filters {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+    
+    /* Team */
+    .team-member-image {
+        height: 350px;
+    }
+    
+    .team-member-name {
+        font-size: 20px;
+    }
+    
+    .team-stats {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    
+    /* Blog */
+    .blog-card {
+        margin-bottom: 20px;
+    }
+    
+    .blog-image {
+        height: 220px;
+    }
+    
+    .blog-content {
+        padding: 20px;
+    }
+    
+    .blog-title {
+        font-size: 18px;
+    }
+    
+    /* Contact Form */
+    .contact-form-section {
+        padding: 25px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-card {
+        padding: 25px;
+    }
+    
+    .contact-info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    /* Booking Form */
+    .booking-card {
+        padding: 25px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+    
+    .btn-lg {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+    
+    /* CTA Section */
+    .cta-title {
+        font-size: 28px;
+    }
+    
+    .cta-subtitle {
+        font-size: 15px;
+    }
+    
+    /* Floating Buttons */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* Small Mobile: < 480px */
+@media (max-width: 479px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .story-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-stats {
+        gap: 15px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 11px;
+    }
+}
+
+/* Landscape Mobile Fix */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 600px;
+    }
+    
+    .page-header {
+        height: 250px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .whatsapp-float,
+    .scroll-to-top,
+    .footer,
+    .hero-buttons,
+    .btn-primary,
+    .btn-secondary {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .section-padding {
+        padding: 20px 0;
+    }
+}
