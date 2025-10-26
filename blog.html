@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Care Blog | Dev Hair Colourist Salon - Tips & Trends</title>
+    <meta name="description" content="Expert hair care tips, styling tutorials, and latest trends from Dev Hair Colourist Salon, Gurugram.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .blog-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .blog-content {
+            padding: 30px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .blog-meta-item i {
+            color: var(--primary-color);
+        }
+        
+        .blog-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+        
+        .blog-title:hover {
+            color: var(--primary-color);
+        }
+        
+        .blog-excerpt {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: var(--transition-base);
+        }
+        
+        .blog-read-more:hover {
+            gap: 12px;
+        }
+        
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        
+        .featured-post .blog-image {
+            height: 100%;
+        }
+        
+        .featured-post .blog-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post .blog-image {
+                height: 300px;
+            }
+            
+            .featured-post .blog-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="scissors-animation"><i class="fas fa-cut"></i></div>
+            <div class="loading-text">Dev Hair Colourist</div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <!-- Same as other pages -->
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1920') center/cover fixed;">
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Hair Care <span class="text-accent">Blog</span></h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Blog</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Latest Articles</span>
+                <h2 class="section-title">Hair Care Tips & <span class="text-accent">Trends</span></h2>
+                <p class="section-description">Expert advice from our professional stylists</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card featured-post" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" alt="2025 Hair Color Trends">
+                        <span class="blog-category">Trending</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                January 15, 2025
+                            </span>
+                            <span class="blog-meta-item">
+                                <i class="fas fa-user"></i>
+                                Dev
+                            </span>
+                        </div>
+                        <h2 class="blog-title">Top 10 Hair Color Trends for 2025</h2>
+                        <p class="blog-excerpt">
+                            From warm caramel tones to bold fashion colors, discover the hottest hair color trends that will dominate 2025. Our expert colorists break down each trend and help you find your perfect shade.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read Full Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600" alt="Balayage Guide">
+                        <span class="blog-category">Tutorial</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                January 10, 2025
+                            </span>
+                        </div>
+                        <h3 class="blog-title">The Complete Guide to Balayage</h3>
+                        <p class="blog-excerpt">
+                            Everything you need to know about this popular coloring technique, from maintenance to styling tips.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600" alt="Hair Care Routine">
+                        <span class="blog-category">Hair Care</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                January 8, 2025
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Winter Hair Care: Essential Tips</h3>
+                        <p class="blog-excerpt">
+                            Protect your hair from winter damage with these expert-recommended care routines and products.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600" alt="Bridal Hair">
+                        <span class="blog-category">Bridal</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                January 5, 2025
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Perfect Bridal Hair: A Complete Guide</h3>
+                        <p class="blog-excerpt">
+                            From trials to the big day, everything you need to know about choosing and maintaining your bridal hairstyle.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600" alt="Color Correction">
+                        <span class="blog-category">Expert Tips</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                January 3, 2025
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Color Correction: What You Need to Know</h3>
+                        <p class="blog-excerpt">
+                            When color goes wrong, color correction can save the day. Learn about the process and what to expect.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600" alt="Men's Grooming">
+                        <span class="blog-category">Men's Style</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                December 30, 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Modern Men's Grooming Trends</h3>
+                        <p class="blog-excerpt">
+                            From fades to textured crops, explore the latest trends in men's hairstyling and grooming.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600" alt="Keratin Treatment">
+                        <span class="blog-category">Treatments</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-meta-item">
+                                <i class="fas fa-calendar"></i>
+                                December 28, 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Keratin Treatment: Is It Right for You?</h3>
+                        <p class="blog-excerpt">
+                            Discover the benefits, process, and aftercare of keratin treatments for smooth, frizz-free hair.
+                        </p>
+                        <a href="#" class="blog-read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section-padding bg-dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-white">Subscribe to Our <span class="text-accent">Newsletter</span></h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 18px;">Get the latest hair care tips, trends, and exclusive offers delivered to your inbox.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! You will receive our latest updates.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
