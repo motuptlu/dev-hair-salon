@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Dev Hair Colourist Salon</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    
+    <!-- Login Screen -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-container">
+            <div class="login-logo">
+                <i class="fas fa-cut"></i>
+                <h2>Admin Login</h2>
+                <p>Dev Hair Colourist Salon</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" required placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard" id="adminDashboard" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-cut"></i>
+                <h3>Dev Hair Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </a>
+                <a href="#" class="nav-item" data-section="bookings">
+                    <i class="fas fa-calendar-check"></i> Bookings
+                </a>
+                <a href="#" class="nav-item" data-section="customers">
+                    <i class="fas fa-users"></i> Customers
+                </a>
+                <a href="#" class="nav-item" data-section="services">
+                    <i class="fas fa-cut"></i> Services
+                </a>
+                <a href="#" class="nav-item" data-section="analytics">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </a>
+                <a href="#" class="nav-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-date">
+                        <i class="fas fa-calendar"></i>
+                        <span id="currentDate"></span>
+                    </div>
+                    <div class="header-user">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="admin-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Today's Bookings</h3>
+                            <p class="stat-number">12</p>
+                            <span class="stat-change positive">+3 from yesterday</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Customers</h3>
+                            <p class="stat-number">1,247</p>
+                            <span class="stat-change positive">+28 this week</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Monthly Revenue</h3>
+                            <p class="stat-number">₹2.4L</p>
+                            <span class="stat-change positive">+15% from last month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Average Rating</h3>
+                            <p class="stat-number">4.9</p>
+                            <span class="stat-change">Based on 342 reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookings -->
+                <div class="data-card">
+                    <div class="card-header">
+                        <h2>Recent Bookings</h2>
+                        <div class="card-actions">
+                            <button class="btn-filter" onclick="filterBookings('all')">All</button>
+                            <button class="btn-filter" onclick="filterBookings('pending')">Pending</button>
+                            <button class="btn-filter" onclick="filterBookings('confirmed')">Confirmed</button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Date & Time</th>
+                                    <th>Phone</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookingsTableBody">
+                                <tr>
+                                    <td>#BK001</td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=1" alt="">
+                                            <span>Priya Sharma</span>
+                                        </div>
+                                    </td>
+                                    <td>Balayage</td>
+                                    <td>Jan 20, 2025 - 2:00 PM</td>
+                                    <td>+91 9876543210</td>
+                                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK002</td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=5" alt="">
+                                            <span>Ananya Singh</span>
+                                        </div>
+                                    </td>
+                                    <td>Keratin Treatment</td>
+                                    <td>Jan 20, 2025 - 4:00 PM</td>
+                                    <td>+91 9876543211</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#BK003</td>
+                                    <td>
+                                        <div class="customer-info">
+                                            <img src="https://i.pravatar.cc/40?img=8" alt="">
+                                            <span>Rohit Malhotra</span>
+                                        </div>
+                                    </td>
+                                    <td>Men's Haircut</td>
+                                    <td>Jan 21, 2025 - 11:00 AM</td>
+                                    <td>+91 9876543212</td>
+                                    <td><span class="status-badge confirmed">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon danger" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>New Booking</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Add Customer</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-file-export"></i>
+                            <span>Export Data</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/admin.js"></script>
+</body>
+</html>
