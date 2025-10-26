@@ -1,0 +1,687 @@
+/* ===================================
+   LOGO ANIMATIONS
+   =================================== */
+
+.logo-svg {
+    animation: logoAppear 1.5s ease-out;
+}
+
+@keyframes logoAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-180deg);
+    }
+    60% {
+        transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Logo hover effect */
+.logo-link:hover .logo-svg {
+    animation: logoHover 0.6s ease-in-out;
+}
+
+@keyframes logoHover {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg) scale(1.05); }
+    75% { transform: rotate(10deg) scale(1.05); }
+}
+
+/* SVG Elements Animation */
+.logo-circle-outer {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: drawCircle 2s ease-out forwards;
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.logo-scissors {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawScissors 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes drawScissors {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.logo-dot {
+    transform-origin: center;
+    animation: popIn 0.5s ease-out 1s backwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo-text {
+    opacity: 0;
+    animation: fadeInText 0.8s ease-out 1.2s forwards;
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+.logo-circle-inner {
+    transform-origin: center;
+    animation: rotateCircle 20s linear infinite;
+}
+
+@keyframes rotateCircle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Logo text animations */
+.logo-title {
+    display: inline-block;
+    animation: slideInTitle 0.8s ease-out 0.5s backwards;
+}
+
+@keyframes slideInTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo-subtitle {
+    display: inline-block;
+    animation: slideInSubtitle 0.8s ease-out 0.7s backwards;
+}
+
+@keyframes slideInSubtitle {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===================================
+   TEXT SCROLL ANIMATIONS
+   =================================== */
+
+/* Smooth landing from bottom */
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Fade from right */
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.8s ease;
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Fade from left */
+[data-aos="fade-left"] {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.8s ease;
+}
+
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Zoom in effect */
+[data-aos="zoom-in"] {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.8s ease;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ===================================
+   HERO TITLE ANIMATIONS
+   =================================== */
+
+.hero-title .title-line {
+    animation: slideUpReveal 1s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.hero-title .title-line:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.hero-title .title-line:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.hero-title .title-line:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideUpReveal {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Glowing accent text */
+.title-accent {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.9));
+    }
+}
+
+/* ===================================
+   SECTION TITLE ANIMATIONS
+   =================================== */
+
+.section-title {
+    background: linear-gradient(90deg, 
+        var(--text-dark) 0%,
+        var(--primary-color) 50%,
+        var(--text-dark) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.section-subtitle {
+    position: relative;
+    display: inline-block;
+}
+
+.section-subtitle::before,
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-subtitle::before {
+    left: -40px;
+    animation: expandLine 1s ease-out;
+}
+
+.section-subtitle::after {
+    right: -40px;
+    animation: expandLine 1s ease-out;
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30px;
+    }
+}
+
+/* ===================================
+   CARD ANIMATIONS
+   =================================== */
+
+.service-card,
+.why-card,
+.testimonial-card {
+    animation: cardFloat 3s ease-in-out infinite;
+}
+
+.service-card:nth-child(2n),
+.why-card:nth-child(2n) {
+    animation-delay: 0.5s;
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Card hover glow effect */
+.service-card::before,
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--primary-light), 
+        var(--accent-color),
+        var(--primary-color)
+    );
+    border-radius: 15px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    background-size: 400%;
+    animation: gradientRotate 3s linear infinite;
+}
+
+@keyframes gradientRotate {
+    to {
+        background-position: 400%;
+    }
+}
+
+.service-card:hover::before,
+.why-card:hover::before {
+    opacity: 1;
+}
+
+/* ===================================
+   IMAGE ANIMATIONS
+   =================================== */
+
+/* Parallax effect on images */
+.welcome-img,
+.gallery-item img {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ken Burns effect */
+@keyframes kenBurns {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    100% {
+        transform: scale(1.1) translate(-5%, -5%);
+    }
+}
+
+.hero-slide {
+    animation: kenBurns 20s ease-out infinite alternate;
+}
+
+/* ===================================
+   BUTTON ANIMATIONS
+   =================================== */
+
+.btn-primary,
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after,
+.btn-secondary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Ripple effect on click */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ===================================
+   ICON ANIMATIONS
+   =================================== */
+
+.service-icon,
+.why-icon {
+    position: relative;
+}
+
+.service-icon::before,
+.why-icon::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    opacity: 0;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+.service-icon i,
+.why-icon i {
+    position: relative;
+    z-index: 1;
+    animation: iconBounce 2s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===================================
+   SOCIAL MEDIA ANIMATIONS
+   =================================== */
+
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-link i {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Floating social icons animation */
+@keyframes socialFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.social-links .social-link:nth-child(1) {
+    animation: socialFloat 2s ease-in-out infinite;
+}
+
+.social-links .social-link:nth-child(2) {
+    animation: socialFloat 2s ease-in-out 0.2s infinite;
+}
+
+.social-links .social-link:nth-child(3) {
+    animation: socialFloat 2s ease-in-out 0.4s infinite;
+}
+
+.social-links .social-link:nth-child(4) {
+    animation: socialFloat 2s ease-in-out 0.6s infinite;
+}
+
+/* ===================================
+   GALLERY ANIMATIONS
+   =================================== */
+
+.gallery-item {
+    animation: galleryReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+.gallery-item:nth-child(5) { animation-delay: 0.5s; }
+.gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes galleryReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ===================================
+   LOADING ANIMATIONS
+   =================================== */
+
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(212, 175, 55, 0.3);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===================================
+   HOVER EFFECTS
+   =================================== */
+
+/* Shine effect on hover */
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.shine-effect:hover::before {
+    left: 100%;
+}
+
+/* ===================================
+   SCROLL ANIMATIONS
+   =================================== */
+
+/* Fade in on scroll */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================
+   BACKGROUND ANIMATIONS
+   =================================== */
+
+/* Animated gradient background */
+.animated-gradient {
+    background: linear-gradient(
+        -45deg,
+        var(--primary-color),
+        var(--accent-color),
+        var(--primary-light),
+        var(--primary-color)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating particles effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-15px) translateX(5px);
+    }
+}
+
+/* ===================================
+   COUNTER ANIMATIONS
+   =================================== */
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.counter-number {
+    animation: countUp 1s ease-out;
+}
+
+/* ===================================
+   RESPONSIVE ANIMATIONS
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 768px) {
+    [data-aos] {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
