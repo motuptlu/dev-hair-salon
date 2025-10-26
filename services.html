@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Dev Hair Colourist Salon - Premium Hair Services</title>
+    <meta name="description" content="Explore our premium hair services: Balayage, Highlights, Keratin Treatment, Bridal Packages, and more at Dev Hair Colourist Salon, Gurugram.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <style>
+        .service-detail-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 40px;
+            transition: var(--transition-base);
+        }
+        
+        .service-detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .service-detail-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .service-detail-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-detail-card:hover .service-detail-header img {
+            transform: scale(1.1);
+        }
+        
+        .service-detail-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+        
+        .service-detail-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .service-detail-body {
+            padding: 40px;
+        }
+        
+        .service-features {
+            display: grid;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .service-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .service-feature-item i {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 3px;
+        }
+        
+        .service-pricing {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .price-tag {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: var(--font-secondary);
+        }
+        
+        .price-note {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Preloader (same as other pages) -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="scissors-animation"><i class="fas fa-cut"></i></div>
+            <div class="loading-text">Dev Hair Colourist</div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar" id="navbar">
+        <!-- Copy from previous pages -->
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1920') center/cover fixed;">
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Our <span class="text-accent">Services</span></h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Premium Hair <span class="text-accent">Services</span></h2>
+                <p class="section-description">Transform your look with our comprehensive range of expert hair services</p>
+            </div>
+
+            <!-- Hair Coloring Services -->
+            <div id="coloring" class="service-category">
+                <h2 class="category-title" data-aos="fade-up">Hair Coloring</h2>
+                
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800" alt="Balayage">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Balayage</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Our signature balayage technique creates a natural, sun-kissed look with seamless color transitions. Hand-painted for a customized finish that grows out beautifully.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized color consultation</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hand-painted application for natural results</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Low maintenance, grows out gracefully</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Premium color products (Wella, L'Oréal Professionnel)</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹8,000 - ₹15,000</div>
+                            <p class="price-note">*Price varies based on hair length and color complexity</p>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book This Service</a>
+                    </div>
+                </div>
+
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800" alt="Highlights">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Highlights & Lowlights</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Add dimension and depth with expertly placed highlights and lowlights. Perfect for creating contrast and enhancing natural hair color.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Strategic color placement for dimension</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Foil or cap technique based on desired look</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Customizable tones and shades</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹6,000 - ₹12,000</div>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book This Service</a>
+                    </div>
+                </div>
+
+                <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800" alt="Ombre">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Ombré & Color Melting</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Achieve a stunning gradient effect with our ombré and color melting services. Seamless transitions from dark to light or color to color.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Gradient color transitions</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Blending multiple tones</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bold or subtle options available</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹7,000 - ₹14,000</div>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book This Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hair Treatments -->
+            <div id="treatments" class="service-category" style="margin-top: 60px;">
+                <h2 class="category-title" data-aos="fade-up">Hair Treatments</h2>
+                
+                <div class="service-detail-card" data-aos="fade-up">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800" alt="Keratin">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Keratin Treatment</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Transform frizzy, unmanageable hair into smooth, shiny, healthy locks with our premium keratin treatment. Lasts 3-6 months.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Eliminates frizz and flyaways</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Reduces styling time by 50%</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Adds incredible shine and smoothness</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Formaldehyde-free formula</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹10,000 - ₹18,000</div>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book This Service</a>
+                    </div>
+                </div>
+
+                <div class="service-detail-card" data-aos="fade-up">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" alt="Hair Botox">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Hair Botox Treatment</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Deeply nourish and repair damaged hair from within. Our hair botox treatment fills gaps in damaged hair fibers for ultimate restoration.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Deep conditioning and repair</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Restores elasticity and strength</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Adds volume and bounce</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹6,000 - ₹12,000</div>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book This Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bridal Services -->
+            <div id="bridal" class="service-category" style="margin-top: 60px;">
+                <h2 class="category-title" data-aos="fade-up">Bridal Packages</h2>
+                
+                <div class="service-detail-card" data-aos="fade-up">
+                    <div class="service-detail-header">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="Bridal Package">
+                        <div class="service-detail-overlay">
+                            <h3 class="service-detail-title">Complete Bridal Package</h3>
+                        </div>
+                    </div>
+                    <div class="service-detail-body">
+                        <p>Look absolutely stunning on your special day with our comprehensive bridal package. Includes pre-bridal treatments, trial, and wedding day services.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pre-bridal hair treatments (3 sessions)</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hair color/highlights if desired</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bridal hair trial session</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Wedding day styling and makeup</span>
+                            </div>
+                            <div class="service-feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complimentary touch-ups</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <div class="price-tag">₹25,000 - ₹45,000</div>
+                            <p class="price-note">*Customizable packages available</p>
+                        </div>
+                        <a href="booking.html" class="btn-primary">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">How It Works</span>
+                <h2 class="section-title">Our Service <span class="text-accent">Process</span></h2>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <h3>Consultation</h3>
+                        <p>In-depth discussion about your hair goals, lifestyle, and maintenance preferences</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <h3>Hair Analysis</h3>
+                        <p>Professional assessment of your hair type, texture, and condition</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <h3>Custom Plan</h3>
+                        <p>Tailored service plan designed specifically for your needs</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <h3>Expert Service</h3>
+                        <p>Relax while our experts work their magic using premium products</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="500">
+                    <div class="process-number">5</div>
+                    <div class="process-content">
+                        <h3>Aftercare Guidance</h3>
+                        <p>Detailed instructions and product recommendations for maintaining your look</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as other pages) -->
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
