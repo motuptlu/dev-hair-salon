@@ -3,74 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Dev Hair Colourist Salon</title>
-    <!-- Same head links -->
+    <title>Contact Us | Dev Hair Colourist Salon - Get in Touch</title>
+    <meta name="description" content="Contact Dev Hair Colourist Salon in Gurugram. Visit us at South Point Mall, Golf Course Road or call +91 9990232499">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animations.css">
+    
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+        
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-info-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .contact-info-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .contact-info-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .contact-info-content p,
+        .contact-info-content a {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .contact-info-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-form-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: var(--font-primary);
+            transition: var(--transition-base);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .map-section {
+            margin-top: 80px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .map-section iframe {
+            width: 100%;
+            height: 500px;
+            border: 0;
+        }
+        
+        .working-hours {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .working-hours h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-day {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .hours-time {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 991px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-section {
+                padding: 30px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
     
-    <section class="contact-section section-padding" style="padding-top: 120px;">
-        <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle">Get In Touch</span>
-                <h1 class="section-title">Contact <span class="text-accent">Us</span></h1>
-            </div>
-            
-            <div class="row" style="gap: 40px;">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Visit Us</h3>
-                                <p>Shop No - 2, UG Floor, South Point Mall<br>
-                                Golf Course Rd, Sector 53<br>
-                                Gurugram, Haryana 122011</p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Call Us</h3>
-                                <p><a href="tel:+919990232499">+91 9990232499</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Working Hours</h3>
-                                <p>Monday - Sunday<br>10:00 AM - 8:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="scissors-animation"><i class="fas fa-cut"></i></div>
+            <div class="loading-text">Dev Hair Colourist</div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <svg class="logo-svg" width="80" height="80" viewBox="0 0 200 200">
+                    <circle class="logo-circle-outer" cx="100" cy="100" r="95" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                    <g class="logo-inner">
+                        <path class="logo-scissors" d="M70,80 Q75,90 80,100 L100,80 L80,100 Q75,110 70,120" stroke="url(#goldGradient)" stroke-width="3" fill="none"/>
+                        <path class="logo-scissors" d="M130,80 Q125,90 120,100 L100,80 L120,100 Q125,110 130,120" stroke="url(#goldGradient)" stroke-width="3" fill="none"/>
+                        <circle class="logo-dot" cx="70" cy="75" r="8" fill="url(#goldGradient)"/>
+                        <circle class="logo-dot" cx="130" cy="75" r="8" fill="url(#goldGradient)"/>
+                        <text class="logo-text" x="100" y="115" font-family="Cormorant Garamond" font-size="45" font-weight="700" fill="url(#goldGradient)" text-anchor="middle">D</text>
+                    </g>
+                    <circle class="logo-circle-inner" cx="100" cy="100" r="70" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3"/>
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#F4E4C1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#C9A961;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-text-container">
+                    <span class="logo-title">DEV</span>
+                    <span class="logo-subtitle">Hair Colourist</span>
                 </div>
-                
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.191234567890!2d77.08374!3d28.431400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI1JzUzLjAiTiA3N8KwMDUnMDEuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                            width="100%" 
-                            height="450" 
-                            style="border:0; border-radius: 15px;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
-                    </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920') center/cover fixed;">
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Contact <span class="text-accent">Us</span></h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Contact</span>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">We'd Love to <span class="text-accent">Hear From You</span></h2>
+                <p class="section-description">Have questions? Ready to book? Reach out to us!</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <div class="contact-info-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Visit Our Salon</h3>
+                            <p>
+                                Shop No - 2, UG Floor<br>
+                                South Point Mall, Golf Course Road<br>
+                                Sector 53, Gurugram<br>
+                                Haryana 122011, India
+                            </p>
+                            <a href="https://maps.app.goo.gl/cWpnHzUBSYytV5JX6" target="_blank" style="color: var(--primary-color); font-weight: 600; margin-top: 10px; display: inline-block;">
+                                Get Directions <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Call Us</h3>
+                            <p>
+                                Phone: <a href="tel:+919990232499">+91 9990232499</a><br>
+                                WhatsApp: <a href="https://wa.me/919990232499">+91 9990232499</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card" data-aos="fade-right" data-aos-delay="300">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Email Us</h3>
+                            <p>
+                                <a href="mailto:info@devhaircolourist.com">info@devhaircolourist.com</a><br>
+                                <a href="mailto:bookings@devhaircolourist.com">bookings@devhaircolourist.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card" data-aos="fade-right" data-aos-delay="400">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Follow Us</h3>
+                            <div class="social-links" style="margin-top: 15px;">
+                                <a href="https://www.instagram.com/devhaircolourist" target="_blank" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/diwash.colourist/" target="_blank" class="social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://wa.me/919990232499" target="_blank" class="social-link">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="working-hours" data-aos="fade-right" data-aos-delay="500">
+                        <h4><i class="fas fa-clock"></i> Working Hours</h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span class="hours-day">Monday - Friday</span>
+                                <span class="hours-time">10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Saturday</span>
+                                <span class="hours-time">10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="hours-day">Sunday</span>
+                                <span class="hours-time">10:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section" data-aos="fade-left">
+                    <h3 style="font-size: 28px; margin-bottom: 25px;">Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Your Name *</label>
+                                <input type="text" id="contactName" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Your Email *</label>
+                                <input type="email" id="contactEmail" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input type="tel" id="contactPhone" name="phone" required placeholder="+91 XXXXXXXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="Booking Inquiry">Booking Inquiry</option>
+                                    <option value="Service Information">Service Information</option>
+                                    <option value="Pricing">Pricing</option>
+                                    <option value="Bridal Package">Bridal Package</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-section" data-aos="fade-up">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.1912345678!2d77.08374!3d28.431400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI1JzUzLjAiTiA3N8KwMDUnMDEuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h3 class="footer-title">Dev Hair Colourist</h3>
+                    <p class="footer-text">Gurugram's premier destination for luxury hair coloring and styling.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/devhaircolourist" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/diwash.colourist/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919990232499" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+919990232499" class="social-link"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#coloring">Hair Coloring</a></li>
+                        <li><a href="services.html#styling">Hair Styling</a></li>
+                        <li><a href="services.html#treatments">Hair Treatments</a></li>
+                        <li><a href="services.html#bridal">Bridal Services</a></li>
+                        <li><a href="services.html#mens">Men's Grooming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Shop No - 2, UG Floor, South Point Mall, Golf Course Rd, Sector 53, Gurugram, Haryana 122011</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+919990232499">+91 9990232499</a></li>
+                        <li><i class="fas fa-clock"></i><span>Mon - Sun: 10:00 AM - 8:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dev Hair Colourist Salon. All Rights Reserved.</p>
+                <p>Designed & Developed by <a href="https://hanunova.oneapp.dev/" target="_blank" class="dev-link">HanuNova</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919990232499?text=Hello%20Dev%20Hair%20Colourist!" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <button class="scroll-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./js/main.js"></script>
+    
+    <script>
+        // Initialize EmailJS (Sign up at emailjs.com for free)
+        (function() {
+            emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // EmailJS service
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(() => {
+                    showNotification('Message sent successfully! We will get back to you soon.', 'success');
+                    this.reset();
+                }, (error) => {
+                    showNotification('Failed to send message. Please try WhatsApp or call us.', 'error');
+                    console.error('EmailJS error:', error);
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalHTML;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type} show`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+    </script>
 </body>
 </html>
